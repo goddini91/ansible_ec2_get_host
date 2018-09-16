@@ -1,0 +1,7 @@
+---
+
+ansible_ssh_user: ubunru
+ansible_ssh_private_key_file: key/private_key
+ansible_become_user: root
+ansible_become_pass: pass
+ansible_ssh_host: 54.197.15.104

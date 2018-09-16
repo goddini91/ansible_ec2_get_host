@@ -1,0 +1,10 @@
+NOTE: This script assumes Ansible is being executed where the environment
+variables needed for Boto have already been set:
+    export AWS_ACCESS_KEY_ID=''
+    export AWS_SECRET_ACCESS_KEY='jhgjh'
+
+
+This script also assumes that there is an ec2.ini file alongside it.  To specify a
+different path to ec2.ini, define the EC2_INI_PATH environment variable:
+
+    export EC2_INI_PATH=/path/to/my_ec2.ini

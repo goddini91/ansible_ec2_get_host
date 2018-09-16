@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  become: yes
+  become_user: root
+  gather_facts: false
+  vars_files:
+  - ./var/variables.yml
+
+  tasks:
+    - name: Cleanup the hosts_dynamic
+      shell: cat /dev/null > ./inventory/hosts_dynamic
+      args:
+        chdir: ./
+
+    - name: Import AWS Dynamic Inventory to hosts_dynamic
+      shell: python ./script/ec2.py --list | python ./script/ansible-dynamic-inventory-converter.py
+      args:
+        chdir: ./
