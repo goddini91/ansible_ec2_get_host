@@ -23,7 +23,7 @@ Playbook Execution Command
 export BASTION_USER=xxx-xxxx;
 export BASTION_HOST=ec2-xx-xx-xx-xx.xxxxx.compute.amazonaws.com;
 ansible-playbook -u ec2-xxxx \
- -i ./inventory/ec2.py \
- ./playbook/ping.yml \
+ -i ./inventory/hosts_dynamic \
+ ./playbook/your_playbook.yml \
  --extra-vars \
  "var_hosts=tag_Name_test_private ansible_ssh_private_key_file=~/.ssh/my-test-key.pem" -vvv
