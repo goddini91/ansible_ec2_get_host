@@ -18,7 +18,7 @@ def add_vars(_type, _id, variables):
     if not os.path.isdir(dir_name):
         os.mkdir(dir_name)
 
-    copyfile("./script/ansible_inventory_template", "%s/%s" % (dir_name, _id))
+    copyfile("./scripts/ansible_inventory_template", "%s/%s" % (dir_name, _id))
         
     with open('%s/%s' % (dir_name, _id), 'a') as fh:
          for ansiblehost, value in variables.items():

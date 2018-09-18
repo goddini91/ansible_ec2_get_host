@@ -13,6 +13,6 @@
         chdir: ./
 
     - name: Import AWS Dynamic Inventory to hosts_dynamic
-      shell: python ./script/ec2.py --list | python ./script/ansible-dynamic-inventory-converter.py
+      shell: python ./scripts/ec2.py --list | python ./scripts/ansible-dynamic-inventory-converter.py
       args:
-        chdir: ./
+        chdir: ./inventory/
