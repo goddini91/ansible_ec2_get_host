@@ -11,7 +11,8 @@ This script also assumes that there is an ec2.ini file alongside it.  To specify
 different path to ec2.ini, define the EC2_INI_PATH environment variable:
 
     export EC2_INI_PATH=/path/to/my_ec2.ini
-    
+
+apt install python-boto3
 ansible-playbook playbook.yml
 
 #############
