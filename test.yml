@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+#  become: yes
+#  become_user: root
+#  gather_facts: false
+#  vars_files:
+#  - ./var/variables.yml
+
+  - name: Create file
+    shell: touch /home/ubuntu/done
+    args:
+      creates: /home/ubuntu/done

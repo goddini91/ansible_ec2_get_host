@@ -51,7 +51,7 @@ def main():
    
     inventory_filename = "./inventory/hosts_dynamic"
 
-    host_groups = ["tag_host_test", "tag_param1_tag", "foreman_hostgroup_elantest", "foreman_hostgroup_elandevelopment"]
+    host_groups = ["tag_host_install", "tag_param1_tag", "foreman_hostgroup_elantest", "foreman_hostgroup_elandevelopment"]
 
     with open(inventory_filename, 'a') as fh:
         for group in inventory:
